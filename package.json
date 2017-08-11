@@ -1,0 +1,11 @@
+{
+  "name": "vicli",
+  "version": "0.1.0",
+  "description": "vicli is a video indexer command line interface!",
+  "main": "app.js",
+  "dependencies": {
+    "video-indexer": "^0.3.2",
+    "inquirer": "^3.2.1"
+  },
+  "author": "Rachel Weil"
+}
