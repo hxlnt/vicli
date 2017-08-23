@@ -58,13 +58,13 @@ function enterAPIKey() {
     Vindexer = new vindexer(answer.apikey);
     Vindexer.getAccounts().then(function (result) {
       let apiresult = JSON.parse(result.body);
-      let owner = apiresult[0].name;
       if (result.statusCode <= 202) {
+        let owner = apiresult[0].name;
         console.log(`\nSuccessfully logged in as ${owner}!\n`);
         mainMenu();
       }
       else {
-        console.log(`\nSomething went wrong! Check your API key and try again. Error message: ${apiresult.message}\n`);
+        console.log(`\nSomething went wrong! Check your API key and try again. \nError message: ${apiresult.message}\n`);
         enterAPIKey();
       }
     });
